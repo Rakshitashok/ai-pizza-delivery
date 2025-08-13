@@ -3,11 +3,6 @@
 ## Overview
 A simple Streamlit web app that runs a pizza-ordering AI agent via the OpenAI Chat API. The agent asks for pizzas, sizes, toppings, special requests, and delivery address, and outputs a final JSON order.
 
-## Quick setup
-1. Clone repo
-2. Create `.env` with:
-3. Install:
-4. Run:
 
 
 ## Notes
