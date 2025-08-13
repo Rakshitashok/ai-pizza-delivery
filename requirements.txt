@@ -1,0 +1,9 @@
+streamlit>=1.25
+openai>=1.0.0
+requests
+pyttsx3
+pydantic
+python-dotenv
+gTTS
+soundfile
+pyaudio

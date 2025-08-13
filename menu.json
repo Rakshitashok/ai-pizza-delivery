@@ -1,0 +1,23 @@
+{
+  "pizzas": [
+    {"id": "margherita", "name": "Margherita", "base_price": 8.0},
+    {"id": "pepperoni", "name": "Pepperoni", "base_price": 9.5},
+    {"id": "veggie", "name": "Veggie", "base_price": 9.0},
+    {"id": "bbq_chicken", "name": "BBQ Chicken", "base_price": 10.5}
+  ],
+  "sizes": [
+    {"id": "small", "multiplier": 1.0},
+    {"id": "medium", "multiplier": 1.25},
+    {"id": "large", "multiplier": 1.5}
+  ],
+  "toppings": [
+    {"id": "extra_cheese", "name": "Extra Cheese", "price": 1.0},
+    {"id": "olives", "name": "Olives", "price": 0.75},
+    {"id": "mushrooms", "name": "Mushrooms", "price": 0.75},
+    {"id": "onions", "name": "Onions", "price": 0.5}
+  ],
+  "extras": [
+    {"id": "soda", "name": "Soda", "price": 2.0},
+    {"id": "garlic_bread", "name": "Garlic Bread", "price": 3.5}
+  ]
+}

@@ -1,0 +1,39 @@
+User: Hi — I'd like to order a pizza.
+Agent: Hi! What pizza would you like? We have Margherita, Pepperoni, Veggie, BBQ Chicken.
+User: One large pepperoni with extra cheese and mushrooms. Also garlic bread.
+Agent: Any allergies or dietary restrictions?
+User: No.
+Agent: Please give delivery address.
+User: 12 Linden Str., Berlin
+Agent: Payment method?
+User: Card on delivery.
+Agent: Confirming — 1 Large Pepperoni with extra cheese and mushrooms, plus Garlic Bread. Deliver to 12 Linden Str., Berlin. Confirm? Yes.
+Agent: ```json
+{ ... final JSON order ... }
+
+
+
+---
+
+# 8) `sample_order.json`
+```json
+{
+  "customer_name": null,
+  "address": "12 Linden Str., Berlin",
+  "order": [
+    {
+      "pizza_id": "pepperoni",
+      "pizza_name": "Pepperoni",
+      "size": "large",
+      "toppings": ["extra_cheese", "mushrooms"],
+      "special_requests": null,
+      "unit_price": 14.25,
+      "quantity": 1
+    }
+  ],
+  "extras": [
+    {"id": "garlic_bread", "name": "Garlic Bread", "quantity": 1, "unit_price": 3.5}
+  ],
+  "total_price": 17.75,
+  "payment_method": "card"
+}

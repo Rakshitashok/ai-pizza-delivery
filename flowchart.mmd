@@ -1,0 +1,13 @@
+flowchart TD
+  A[Start] --> B[Welcome & Ask Pizza Type]
+  B --> C{Pizza Selected?}
+  C -- No --> B
+  C -- Yes --> D[Ask Size]
+  D --> E[Ask Toppings/Extras]
+  E --> F[Ask Allergies/Special Requests]
+  F --> G[Ask Delivery Address]
+  G --> H[Confirm Order Details]
+  H --> I{Confirmed?}
+  I -- Yes --> J[Return JSON order]
+  I -- No --> B
+  J --> K[End]

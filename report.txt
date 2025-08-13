@@ -1,0 +1,36 @@
+AI Pizza Delivery Service — Project Report
+
+Objective
+Develop an AI dialog agent that collects pizza orders, handles special requests/allergies, records delivery address, and outputs a structured order (JSON).
+
+Implementation Summary
+Architecture:
+- Streamlit UI (streamlit_app.py) for chat-based interaction.
+- Dialog manager (dialog_manager.py) that calls OpenAI Chat API and loads the handcrafted system prompt (prompt.txt) to steer the model.
+- Menu defined in menu.json; final orders saved as JSON (sample_order.json).
+- Flowchart (flowchart.mmd) documents the dialog flow: request pizza -> size -> toppings -> allergies -> address -> confirm -> JSON output.
+
+Key files:
+- `streamlit_app.py` — web UI for typed chat; minimal audio support scaffolded.
+- `dialog_manager.py` — model communication and menu loading.
+- `prompt.txt` — system-level prompt instructing the model to validate menu items and produce final JSON.
+
+Speech
+- The system supports optional speech through the OpenAI Whisper API (not enabled by default in the sample app). For TTS, gTTS or browser-native audio can be used.
+
+Testing & Evidence
+- `sample_transcript.txt` demonstrates a successful order flow.
+- `sample_order.json` shows the structured output that the agent must produce.
+
+Limitations & Known Issues
+- Model JSON outputs can be malformed; production should parse and validate the model response robustly and re-ask if parsing fails.
+- Pricing logic in this prototype is based on simple multipliers — extend as needed.
+- Speech support depends on external APIs and might add latency or require extra keys.
+
+How to run
+1. Set `OPENAI_API_KEY` in `.env`.
+2. Install dependencies: `pip install -r requirements.txt`
+3. Start app: `streamlit run streamlit_app.py`
+
+Reflection
+This project demonstrates a small, end-to-end AI agent. For improvement: stronger input validation, unit tests for price calculations, richer UI (order cart), and integration of local models for offline usage.
